@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+        <form method="POST" action="/gamehub/show_orderlist">{% csrf_token %}
+
+                  <label for="show_orderlist">請留下預約內容:</label><br>
+                  <input type="text" id="show_orderlist" name="show_orderlist"><br>
+                <input type="submit" value="Submit">
+<!--                    {{ form }}-->
+<!--                    <h1> {{ user }}目前預約項目如下：</h1>>-->
+<!--                    <input type="submit" value="Submit">-->
+                </form>
+    </body>
+</html>

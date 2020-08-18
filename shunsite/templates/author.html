@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+{% block content %}
+    <h1>:: 這是 {{ name }} 的模板拉 :: </h1>
+{% endblock %}
+
+{% block sidebar %}
+{% load static %}
+<img src="{% static 'nyc-gifathon1.gif' %}" alt="有一個人在跑步" width="500" height="600">
+    <ul class="sidebar-nav">
+        <h1>這邊總共有 {{ sidebar|length }} 元素</h1>>
+        {% for bar in sidebar %}
+        <li><a href="">{{ bar }}</a></li>
+        {% endfor %}
+    </ul>
+
+## 這邊有一份新增的內容 ！
+<table>
+{% for a in articles %}
+  <tr>
+    <td>{{ a.user }}</td>
+    <td>{{ a.content }}</td>
+    <td>{{ a.last_update }}</td>
+  </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            登入頁面
+        </title>
+<!--        <style>-->
+<!--            h1 {text-align: center;}-->
+<!--            p {text-align: center;}-->
+<!--            div {text-align: center;}-->
+<!--            form {text-align: center;valign:"center";}-->
+<!--        </style>-->
+    </head>
+
+    <body>
+        <form method="POST" action="/gamehub/comments">{% csrf_token %}
+<!--    &lt;!&ndash;-->
+<!--          <label for="content">Comment:</label><br>-->
+<!--          <input type="text" id="content" name="content"><br>-->
+<!--    &ndash;&gt;-->
+            {{ form }}
+            <h1> {{ user }}目前預約項目如下：</h1>>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
